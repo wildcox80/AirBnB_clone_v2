@@ -8,6 +8,7 @@ import sqlalchemy
 from sqlalchemy import Column, String, ForeignKey
 from sqlalchemy.orm import relationship
 
+
 class State(BaseModel):
     """ State class, contains name """
     if models.storage_t == "db":

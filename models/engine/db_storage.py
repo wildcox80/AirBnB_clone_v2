@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """ Contains the class DBStorage """
 
-
 from models.amenity import Amenity
 from models.base_model import BaseModel, Base
 from models.city import City
@@ -65,7 +64,7 @@ class DBStorage:
             self.__session.commit()
 
     def reload(self):
-        """ 
+        """
         Create all tables in the database and
         reate the current database session
         """
