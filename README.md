@@ -148,8 +148,8 @@ $
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/wildcox80/holberton-system_engineering-devops.svg?style=plastic
-[contributors-url]: https://github.com/wildcox80/holberton-system_engineering-devops/graphs/contributors
+[contributors-shield]: https://img.shields.io/github/contributors/luzperdomo92/AirBnB_clone_v2.svg?style=plastic
+[contributors-url]: https://github.com/luzperdomo92/AirBnB_clone_v2/graphs/contributors
 [license-shield]: https://img.shields.io/github/license/wildcox80/holberton-system_engineering-devops.svg?style=plastic
 [license-url]: https://github.com/wildcox80/holberton-system_engineering-devops/blob/master/LICENSE.md
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=plastic&logo=linkedin&colorB=555
