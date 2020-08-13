@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """ Unificate the Storage"""
 import os
 

@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """ Console Module """
 import cmd
 import sys
@@ -224,11 +225,11 @@ class HBNBCommand(cmd.Cmd):
         print_list = []
 
         if args:
-            args = args.split(' ')[0]  # remove possible trailing args
-            all_fetched = storage.all(args)
+            classname = args.split(' ')[0]  # remove possible trailing args
+            all_fetched = storage.all(HBNBCommand.classes[classname])
         else:
             all_fetched = storage.all()
-        print(all_fetched.__class__)
+
         for v in all_fetched.values():
             print_list.append(str(v))
 
