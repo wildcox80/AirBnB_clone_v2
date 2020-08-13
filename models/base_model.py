@@ -12,18 +12,18 @@ Base = declarative_base()
 class BaseModel:
     """A base class to define common attributes for all models"""
 
-    id = Column(String(60) primary_key=True, nullable=False)
+    id = Column(String(60), primary_key=True, nullable=False)
     created_at = Column(DateTime, nullable=False,  default=datetime.utcnow())
     updated_at = Column(DateTime, nullable=False,  default=datetime.utcnow())
 
     def __init__(self, *args, **kwargs):
         """Instatntiates a new model"""
         if kwargs:
-            if "id" is not in kwargs.items():
+            if "id" not in kwargs.items():
                 self.id = str(uuid.uuid4())
-            if "created_at" is not in kwargs.items():
+            if "created_at" not in kwargs.items():
                 self.created_at = datetime.now()
-            if "updated_at" is not in kwargs.items():
+            if "updated_at" not in kwargs.items():
                 self.updated_at = datetime.now()
             for key, value in kwargs.items():
                 if key == "created_at" or key == "updated_at":
@@ -43,8 +43,8 @@ class BaseModel:
         """Updates updated_at with current time when instance is changed"""
         from models import storage
         self.updated_at = datetime.now()
-        models.storage.new(self)
-        models.storage.save()
+        storage.new(self)
+        storage.save()
 
     def to_dict(self):
         """
