@@ -8,6 +8,8 @@ from os import getenv
 from sqlalchemy import Column, String, ForeignKey
 from sqlalchemy.orm import relationship
 
+
 class Amenity(BaseModel, Base):
+    """This class defines a Amenity by various attributes"""
     __tablename__ = 'amenities'
     name = ""
