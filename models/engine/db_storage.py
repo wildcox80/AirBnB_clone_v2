@@ -33,8 +33,8 @@ class DBStorage:
                                       format(HBNB_MYSQL_USER,
                                              HBNB_MYSQL_PWD,
                                              HBNB_MYSQL_HOST,
-                                             HBNB_MYSQL_DB,
-                                             pool_pre_ping=True))
+                                             HBNB_MYSQL_DB),
+                                      pool_pre_ping=True)
         if HBNB_ENV == "test":
             Base.metadata.drop_all(self.__engine)
 
@@ -61,7 +61,7 @@ class DBStorage:
         """delete from the current database session obj"""
         if obj is not None:
             self.__session.delete(obj)
-            self.__session.commit()
+            self.save()
 
     def reload(self):
         """
