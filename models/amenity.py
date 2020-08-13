@@ -12,4 +12,4 @@ from sqlalchemy.orm import relationship
 class Amenity(BaseModel, Base):
     """This class defines a Amenity by various attributes"""
     __tablename__ = 'amenities'
-    name = ""
+    name = Column(String(128), nullable=False)
