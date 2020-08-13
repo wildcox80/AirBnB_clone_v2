@@ -141,10 +141,6 @@ class HBNBCommand(cmd.Cmd):
             attr_split = attr_param.split("=")
             key = attr_split[0]
             value_raw = attr_split[1]
-            print("********")
-            print(attr_param)
-            print(value_raw)
-            print("********")
             # remove quotes and replace underscores with spaces
             value = value_raw.replace('"', "").replace("_", " ")
             attributes[key] = value
