@@ -7,6 +7,7 @@ then
 	sudo apt-get -y update
 	sudo apt-get -y install nginx
 	echo "Nginx not installed"
+fi
 
 #Create folders
 sudo mkdir -p /data/web_static/releases/test /data/web_static/shared
