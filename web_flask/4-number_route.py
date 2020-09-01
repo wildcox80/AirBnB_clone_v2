@@ -33,7 +33,7 @@ def pythoniscool(text='is cool'):
 
 
 @app.route('/number/<int:n>', strict_slashes=False)
-def imanumber(n):
+def iamnumber(n):
     """display “n is a number”"""
     return "{:d} is a number".format(n)
 
