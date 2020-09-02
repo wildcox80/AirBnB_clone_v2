@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-""" Unittest Amenity class """
-
+""" Unittest test_base_model.py """
 from models.base_model import BaseModel
 import unittest
 import datetime
@@ -51,6 +50,12 @@ class test_basemodel(unittest.TestCase):
     def setUp(self):
         """ """
         pass
+
+    def tearDown(self):
+        try:
+            os.remove('file.json')
+        except:
+            pass
 
     def test_default(self):
         """ """
@@ -129,7 +134,3 @@ class test_basemodel(unittest.TestCase):
         n = new.to_dict()
         new = BaseModel(**n)
         self.assertFalse(new.created_at == new.updated_at)
-
-
-if __name__ == '__main__':
-    unittest.main()
