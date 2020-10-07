@@ -11,6 +11,12 @@ app = Flask(__name__)
 def index():
     """returns Hello HBNB!"""
 
+    return 'Hello HBNB'
+
+
+@app.route("/airbnb-onepage/", strict_slashes=False)
+def route1():
+    """response for route in task0"""
     return 'Hello HBNB!'
 
 
